@@ -1,0 +1,3224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Unique Tiles - Marble Contractor in Sugama Layout, Naynapanahalli, Bengaluru</title>
+  <meta name="description"
+    content="I provide skilled and experienced workers with A1 quality, neat and clean work with responsibility.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3f4f4;
+      --fg: #1b2124;
+      --muted: #5d676b;
+      --line: #d5d9da;
+      --card: #ffffff;
+      --ink: #10201c;
+      --ink2: #18302a;
+      --brass: #b8935a;
+      --brass-hover: #c9a56c;
+      --brass-tint: rgba(184, 147, 90, 0.12);
+      --onink: #eef1ef;
+      --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+      --sans: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 90px);
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 400 16px/1.65 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--brass);
+      outline-offset: 3px;
+    }
+
+    .skip {
+      position: absolute;
+      left: -999px;
+      top: 8px;
+      background: var(--brass);
+      color: #1a1409;
+      padding: 8px 14px;
+      z-index: 99;
+    }
+
+    .skip:focus {
+      left: 8px;
+    }
+
+    .wrap {
+      width: min(1160px, 100% - 40px);
+      margin-inline: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.15;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    section {
+      padding: 84px 0;
+    }
+
+    .alt {
+      background: var(--card);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 26px;
+      border: 0;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.94rem;
+      background: var(--brass);
+      color: #1a1409;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: var(--brass-hover);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--onink);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+    }
+
+    .btn.ghost:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #fff;
+    }
+
+    .btn.line {
+      background: transparent;
+      color: var(--fg);
+      border: 1px solid var(--line);
+    }
+
+    .btn.line:hover {
+      border-color: var(--brass);
+      background: #fff;
+    }
+
+    .btn.sm {
+      padding: 8px 16px;
+      font-size: 0.88rem;
+    }
+
+    .go {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 0.94rem;
+      color: var(--brass);
+      background: none;
+      border: 0;
+      padding: 0;
+    }
+
+    .go i {
+      font-style: normal;
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      transition: background 0.25s, transform 0.25s, color 0.25s;
+    }
+
+    .go:hover i,
+    a:hover>.go i,
+    .card:hover .go i {
+      background: var(--brass);
+      color: #1a1409;
+      transform: rotate(-45deg);
+    }
+
+    /* Header & Top Bar */
+    .top {
+      background: var(--ink);
+      color: rgba(238, 241, 239, 0.78);
+      font-size: 0.86rem;
+      padding-top: env(safe-area-inset-top, 0px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .top .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px 24px;
+      flex-wrap: wrap;
+      padding: 9px 0;
+    }
+
+    .top a,
+    .top button {
+      color: inherit;
+      transition: color 0.2s;
+      background: none;
+      border: 0;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: inherit;
+    }
+
+    .top a:hover,
+    .top button:hover {
+      color: var(--brass);
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .inbox-pill {
+      background: rgba(184, 147, 90, 0.15);
+      border: 1px solid rgba(184, 147, 90, 0.4);
+      color: var(--brass) !important;
+      padding: 3px 10px;
+      border-radius: 99px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .inbox-pill:hover {
+      background: var(--brass);
+      color: #1a1409 !important;
+    }
+
+    .badge-count {
+      background: var(--brass);
+      color: #1a1409;
+      border-radius: 10px;
+      padding: 1px 6px;
+      font-size: 0.72rem;
+      margin-left: 4px;
+      font-weight: 700;
+    }
+
+    header.nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-in {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--fg);
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1.5px solid var(--brass);
+      display: block;
+      flex: none;
+    }
+
+    .links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .links a {
+      color: var(--muted);
+      transition: color 0.2s;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .links a:hover,
+    .links a.on {
+      color: var(--fg);
+      border-color: var(--brass);
+    }
+
+    .burger {
+      display: none;
+      background: none;
+      border: 0;
+      width: 44px;
+      height: 44px;
+    }
+
+    .burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: currentColor;
+      margin: 6px auto;
+      transition: 0.3s;
+    }
+
+    .burger.open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger.open span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Pages router */
+    .pg[hidden] {
+      display: none;
+    }
+
+    .pg {
+      animation: fade 0.5s both;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* FULL-SCREEN VIDEO HERO */
+    .hero {
+      position: relative;
+      min-height: clamp(580px, 82vh, 840px);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 90px 0 80px;
+      color: var(--onink);
+      background: #08110e;
+    }
+
+    .hero-video-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      pointer-events: none;
+      filter: contrast(1.04) brightness(0.92);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(8, 17, 14, 0.42) 0%, rgba(16, 32, 28, 0.28) 45%, rgba(8, 17, 14, 0.82) 100%),
+        linear-gradient(90deg, rgba(8, 17, 14, 0.7) 0%, rgba(8, 17, 14, 0.3) 55%, transparent 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+    }
+
+    .chip {
+      display: inline-block;
+      border: 1px solid rgba(184, 147, 90, 0.65);
+      color: var(--brass);
+      padding: 5px 14px;
+      border-radius: 99px;
+      font-size: 0.88rem;
+      margin-bottom: 22px;
+      background: rgba(16, 32, 28, 0.6);
+      backdrop-filter: blur(4px);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5.8vw, 4.4rem);
+      max-width: 17ch;
+      line-height: 1.1;
+      margin-bottom: 22px;
+      color: #fff;
+    }
+
+    .hero p {
+      max-width: 580px;
+      font-size: 1.18rem;
+      color: rgba(238, 241, 239, 0.88);
+      margin-bottom: 34px;
+      line-height: 1.7;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .trust-item h4 {
+      color: var(--onink);
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .trust-item p {
+      color: rgba(238, 241, 239, 0.72);
+      font-size: 0.86rem;
+      margin-top: 2px;
+    }
+
+    /* Marquee Band */
+    .band {
+      background: var(--brass);
+      color: #1a1409;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 13px 0;
+      font-family: var(--serif);
+      font-size: 1.1rem;
+    }
+
+    .band-in {
+      display: inline-block;
+      animation: slide 38s linear infinite;
+    }
+
+    .band-in span {
+      margin: 0 18px;
+    }
+
+    @keyframes slide {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Glance Bar */
+    .glance {
+      padding: 48px 0 0;
+    }
+
+    .gl {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      display: grid;
+      grid-template-columns: auto 1fr 1.3fr 1fr;
+      align-items: stretch;
+      overflow: hidden;
+    }
+
+    .gl>div {
+      padding: 24px 26px;
+      border-left: 1px solid var(--line);
+    }
+
+    .gl>div:first-child {
+      border: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--serif);
+      font-size: 1.3rem;
+    }
+
+    .gl small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 4px;
+    }
+
+    .gl b {
+      font-weight: 500;
+      line-height: 1.4;
+      display: block;
+    }
+
+    .gl .go {
+      margin-top: 6px;
+    }
+
+    /* Section Header */
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .head p {
+      color: var(--muted);
+      margin: 8px 0 0;
+      max-width: 52ch;
+      font-size: 1rem;
+    }
+
+    /* Services Grid with High-Clarity Unblurred Background Photos (Option A) */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .card.service-card {
+      position: relative;
+      min-height: 310px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(184, 147, 90, 0.35);
+      background: #10201c;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease,
+        box-shadow 0.4s ease;
+    }
+
+    .card.service-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--brass);
+      box-shadow: 0 20px 42px -12px rgba(0, 0, 0, 0.42);
+    }
+
+    .card.service-card .card-bg-layer {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.88;
+      filter: none;
+      transform: scale(1.0);
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .card.service-card:hover .card-bg-layer {
+      transform: scale(1.08);
+      opacity: 1;
+    }
+
+    .card.service-card .card-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(16, 32, 28, 0.04) 0%, rgba(16, 32, 28, 0.42) 42%, rgba(10, 20, 18, 0.94) 82%, #08110e 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .card.service-card .top-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 2;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(16, 32, 28, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(184, 147, 90, 0.6);
+      color: var(--brass);
+      display: grid;
+      place-items: center;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .card.service-card .card-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card.service-card h3 {
+      font-size: 1.25rem;
+      margin: 0;
+      font-weight: 600;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    .card.service-card p {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0;
+      line-height: 1.55;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+    }
+
+    .card.service-card .card-foot {
+      margin-top: 10px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card.service-card .go {
+      color: var(--brass);
+      background: none;
+      border: 0;
+      padding: 0;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s;
+      cursor: pointer;
+    }
+
+    .card.service-card:hover .go {
+      gap: 10px;
+      color: #dfbf88;
+    }
+
+    .card.service-card .view-tag {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    /* Products Cards with Real Photo Previews */
+    .card.prod {
+      padding: 0;
+      overflow: hidden;
+      gap: 0;
+      cursor: pointer;
+    }
+
+    .sw-img {
+      aspect-ratio: 4/3;
+      position: relative;
+      overflow: hidden;
+      background: #222;
+    }
+
+    .sw-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .card.prod:hover .sw-img img {
+      transform: scale(1.08);
+    }
+
+    .sw-tag {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(16, 32, 28, 0.85);
+      color: var(--brass);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(184, 147, 90, 0.4);
+    }
+
+    .pb {
+      padding: 20px 22px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .pb h3 {
+      font-size: 1.2rem;
+    }
+
+    .pb p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .pb .go {
+      margin-top: auto;
+    }
+
+    /* Real Videos Showcase Section */
+    .video-showcase-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .video-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-player-wrap {
+      position: relative;
+      aspect-ratio: 16/10;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .video-player-wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-card-body {
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .video-card-body h3 {
+      font-size: 1.25rem;
+    }
+
+    .video-card-body p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* Why Us */
+    .feat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .feat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .feat-num {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--brass);
+      font-weight: 500;
+    }
+
+    .feat h3 {
+      font-size: 1.2rem;
+    }
+
+    .feat p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* Gallery with Real Images */
+    .gal-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .gal-tab {
+      padding: 8px 18px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .gal-tab.on,
+    .gal-tab:hover {
+      background: var(--brass);
+      color: #1a1409;
+      border-color: var(--brass);
+    }
+
+    .gal-grid-real {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .gal-card-real {
+      position: relative;
+      aspect-ratio: 4/3;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid var(--line);
+      background: #1a1a1a;
+    }
+
+    .gal-card-real img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .gal-card-real:hover img {
+      transform: scale(1.08);
+    }
+
+    .gal-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(16, 32, 28, 0.92) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 14px;
+      color: #fff;
+    }
+
+    .gal-card-real:hover .gal-card-overlay {
+      opacity: 1;
+    }
+
+    .gal-card-overlay b {
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .gal-card-overlay small {
+      font-size: 0.8rem;
+      color: var(--brass);
+    }
+
+    /* Reviews */
+    .rev-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 20px;
+    }
+
+    .rev-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .stars {
+      color: var(--brass);
+      letter-spacing: 2px;
+      font-size: 1rem;
+    }
+
+    .rev-text {
+      font-size: 0.95rem;
+      color: var(--fg);
+      line-height: 1.65;
+    }
+
+    .rev-author {
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      font-size: 0.9rem;
+    }
+
+    .rev-author b {
+      display: block;
+      font-weight: 600;
+    }
+
+    .rev-author small {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    /* Contact Section & Form */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.2fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .contact-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 6px;
+    }
+
+    .contact-card p.sub {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 22px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .field label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--fg);
+    }
+
+    .ph {
+      display: flex;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--bg);
+      transition: border-color 0.2s;
+    }
+
+    .ph:focus-within,
+    textarea:focus,
+    select:focus {
+      border-color: var(--brass);
+      outline: 2px solid var(--brass-tint);
+    }
+
+    .ph span {
+      padding: 11px 14px;
+      border-right: 1px solid var(--line);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    input,
+    textarea,
+    select {
+      font: inherit;
+      color: inherit;
+      background: var(--bg);
+      border: 0;
+      padding: 11px 14px;
+      width: 100%;
+      outline: 0;
+    }
+
+    textarea {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    select {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .err {
+      color: #b52a1d;
+      font-size: 0.82rem;
+      min-height: 1.1em;
+      display: block;
+      margin-top: 3px;
+    }
+
+    .form-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin: 8px 0 16px;
+    }
+
+    /* Hours Table */
+    .hours {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .hours td {
+      padding: 11px 4px;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.94rem;
+    }
+
+    .hours td:last-child {
+      text-align: right;
+      font-weight: 500;
+    }
+
+    .hours tr.today td {
+      color: var(--brass);
+      font-weight: 600;
+    }
+
+    .hours tr.today td:first-child::after {
+      content: " (Today)";
+      font-size: 0.8rem;
+    }
+
+    /* Inner Page Header */
+    .phead {
+      background: radial-gradient(120% 140% at 80% 0, var(--ink2), var(--ink) 70%);
+      color: var(--onink);
+      padding: 74px 0 60px;
+    }
+
+    .phead h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+    }
+
+    .phead p {
+      color: rgba(238, 241, 239, 0.72);
+      margin: 12px 0 0;
+      max-width: 52ch;
+      font-size: 1.05rem;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      padding: 4px;
+      margin-bottom: 34px;
+      background: var(--card);
+    }
+
+    .tabs button {
+      border: 0;
+      background: none;
+      padding: 9px 24px;
+      border-radius: 99px;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .tabs button.on {
+      background: var(--brass);
+      color: #1a1409;
+    }
+
+    /* Final Section */
+    .final {
+      background: var(--ink);
+      color: var(--onink);
+      text-align: center;
+      padding: 72px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final .wrap {
+      position: relative;
+    }
+
+    .final h2 {
+      max-width: 20ch;
+      margin: 0 auto 12px;
+    }
+
+    .final p {
+      color: rgba(238, 241, 239, 0.72);
+      margin: 0 auto 24px;
+      max-width: 48ch;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--ink);
+      color: rgba(238, 241, 239, 0.7);
+      padding: 60px 0 30px;
+      font-size: 0.94rem;
+    }
+
+    .fg {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    footer h4 {
+      color: var(--onink);
+      font-weight: 500;
+      margin: 0 0 14px;
+      font-size: 1.05rem;
+    }
+
+    footer ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 9px;
+    }
+
+    footer a:hover {
+      color: var(--brass);
+    }
+
+    .copy {
+      margin-top: 44px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.88rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* Floating Actions */
+    .fab-group {
+      position: fixed;
+      right: 18px;
+      bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
+      z-index: 45;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .fab {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--brass);
+      color: #1a1409;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+      border: 0;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .fab:hover {
+      transform: scale(1.06);
+      background: var(--brass-hover);
+    }
+
+    .fab.dark {
+      background: var(--ink2);
+      color: var(--brass);
+      border: 1.5px solid var(--brass);
+      position: relative;
+    }
+
+    .fab.dark .badge {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      background: #c0392b;
+      color: #fff;
+      border-radius: 10px;
+      font-size: 0.7rem;
+      padding: 2px 5px;
+      font-weight: 700;
+    }
+
+    /* Dialogs */
+    dialog {
+      border: 0;
+      border-radius: 12px;
+      padding: 28px;
+      width: min(480px, calc(100% - 28px));
+      background: var(--card);
+      color: var(--fg);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      font: inherit;
+    }
+
+    dialog::backdrop {
+      background: rgba(8, 14, 12, 0.65);
+      backdrop-filter: blur(3px);
+    }
+
+    dialog[open] {
+      animation: pop 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    @keyframes pop {
+      from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.97);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .x {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 0;
+      background: none;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: var(--muted);
+      cursor: pointer;
+    }
+
+    .x:hover {
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    dialog h3 {
+      font-size: 1.55rem;
+      margin-bottom: 6px;
+      padding-right: 28px;
+    }
+
+    dialog p.sub {
+      color: var(--muted);
+      margin: 0 0 18px;
+      font-size: 0.92rem;
+    }
+
+    /* Leads Drawer */
+    #leads-modal {
+      width: min(680px, calc(100% - 24px));
+    }
+
+    .lead-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .lead-item.new-lead {
+      border-left: 3px solid var(--brass);
+      background: #fff;
+    }
+
+    .lead-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .lead-btns {
+      display: flex;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    /* PROPERLY SIZED & ALIGNED LIGHTBOX */
+    .lb {
+      width: min(1040px, calc(100% - 24px));
+      background: #091310;
+      color: var(--onink);
+      padding: 22px;
+      border-radius: 12px;
+      border: 1px solid rgba(184, 147, 90, 0.4);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+    }
+
+    .lb .big2 {
+      width: 100%;
+      height: 72vh;
+      max-height: 700px;
+      min-height: 380px;
+      border-radius: 8px;
+      background: #020605;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .lb .big2 img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      user-select: none;
+    }
+
+    .lb .bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .lb .bar button {
+      background: rgba(255, 255, 255, 0.12);
+      border: 0;
+      border-radius: 4px;
+      padding: 8px 18px;
+      color: inherit;
+      font-size: 0.9rem;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .lb .bar button:hover {
+      background: var(--brass);
+      color: #1a1409;
+    }
+
+    .lb .x {
+      color: #fff;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Toast */
+    .toast-wrap {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      pointer-events: none;
+    }
+
+    .toast {
+      pointer-events: auto;
+      background: var(--ink);
+      color: var(--onink);
+      border: 1px solid rgba(184, 147, 90, 0.4);
+      padding: 12px 18px;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      animation: slideIn 0.25s ease;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: none;
+        opacity: 1;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .video-showcase-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gal-grid-real {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .gl {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gl>div {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .gl>div:first-child {
+        grid-column: 1 / -1;
+        border-top: 0;
+      }
+
+      .contact-grid,
+      .fg {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .burger {
+        display: block;
+      }
+
+      .links {
+        position: fixed;
+        inset: 0;
+        top: calc(env(safe-area-inset-top, 0px) + 72px);
+        background: var(--ink);
+        color: var(--onink);
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        font-size: 1.45rem;
+        font-family: var(--serif);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        z-index: 60;
+      }
+
+      .links a {
+        color: var(--onink);
+      }
+
+      .links.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .gal-grid-real {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .gl {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 70px 0;
+        min-height: 70vh;
+      }
+
+      .lb .big2 {
+        height: 50vh;
+        min-height: 260px;
+      }
+    }
+
+    /* ==================== SMOOTH UX & MICRO-ANIMATIONS ==================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(243, 244, 244, 0.82);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+      transition: background 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    header.scrolled {
+      background: rgba(243, 244, 244, 0.96);
+      box-shadow: 0 10px 30px -10px rgba(16, 32, 28, 0.12);
+      border-bottom-color: rgba(184, 147, 90, 0.3);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered entrance delays for grid children */
+    .grid .reveal:nth-child(1),
+    .gal-grid-real .reveal:nth-child(1) {
+      transition-delay: 0ms;
+    }
+
+    .grid .reveal:nth-child(2),
+    .gal-grid-real .reveal:nth-child(2) {
+      transition-delay: 50ms;
+    }
+
+    .grid .reveal:nth-child(3),
+    .gal-grid-real .reveal:nth-child(3) {
+      transition-delay: 100ms;
+    }
+
+    .grid .reveal:nth-child(4),
+    .gal-grid-real .reveal:nth-child(4) {
+      transition-delay: 150ms;
+    }
+
+    .grid .reveal:nth-child(5),
+    .gal-grid-real .reveal:nth-child(5) {
+      transition-delay: 200ms;
+    }
+
+    .grid .reveal:nth-child(6),
+    .gal-grid-real .reveal:nth-child(6) {
+      transition-delay: 250ms;
+    }
+
+    .grid .reveal:nth-child(7),
+    .gal-grid-real .reveal:nth-child(7) {
+      transition-delay: 300ms;
+    }
+
+    .grid .reveal:nth-child(8),
+    .gal-grid-real .reveal:nth-child(8) {
+      transition-delay: 350ms;
+    }
+
+    /* Interactive Buttons */
+    .btn {
+      position: relative;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -6px rgba(184, 147, 90, 0.45);
+    }
+
+    .btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .btn.ghost:hover {
+      background: rgba(184, 147, 90, 0.15);
+      border-color: var(--brass);
+      transform: translateY(-2px);
+    }
+
+    .btn.line:hover {
+      border-color: var(--brass);
+      background: var(--brass-tint);
+      transform: translateY(-2px);
+    }
+
+    /* Products Cards smooth hover */
+    .card.prod {
+      border-radius: 12px;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s ease,
+        border-color 0.3s ease;
+    }
+
+    .card.prod:hover {
+      transform: translateY(-8px);
+      border-color: var(--brass);
+      box-shadow: 0 20px 40px -12px rgba(16, 32, 28, 0.18);
+    }
+
+    .sw-tag {
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+
+    .card.prod:hover .sw-tag {
+      background: var(--brass);
+      color: #10201c;
+      border-color: var(--brass);
+    }
+
+    /* Video Cards smooth hover */
+    .video-card {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s ease,
+        border-color 0.3s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--brass);
+      box-shadow: 0 18px 38px -12px rgba(16, 32, 28, 0.16);
+    }
+
+    /* Feature & Review Cards */
+    .feat,
+    .rev-card {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.35s ease,
+        border-color 0.3s ease;
+    }
+
+    .feat:hover,
+    .rev-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--brass);
+      box-shadow: 0 16px 32px -10px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Gallery Stagger Animation */
+    @keyframes galFadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.94) translateY(14px);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .gal-card-real {
+      animation: galFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s ease,
+        border-color 0.3s ease;
+    }
+
+    .gal-card-real:hover {
+      transform: translateY(-6px);
+      border-color: var(--brass);
+      box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Contact Card Soft Pulse */
+    @keyframes cardPulse {
+      0% {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        border-color: var(--line);
+      }
+
+      50% {
+        box-shadow: 0 0 0 5px var(--brass-tint), 0 16px 40px rgba(184, 147, 90, 0.28);
+        border-color: var(--brass);
+      }
+
+      100% {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        border-color: var(--line);
+      }
+    }
+
+    .contact-card.highlight {
+      animation: cardPulse 1.4s ease;
+    }
+
+    /* Floating Actions Floating Breath */
+    @keyframes fabFloat {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+
+    .fab-group {
+      animation: fabFloat 4s ease-in-out infinite;
+    }
+
+    .fab-group:hover {
+      animation-play-state: paused;
+    }
+
+    .fab {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+    }
+
+    .fab:hover {
+      transform: scale(1.1) translateY(-2px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.38);
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="toast-wrap" id="toasts"></div>
+
+  <!-- TOP BAR -->
+  <div class="top">
+    <div class="wrap">
+      <div style="display:flex;align-items:center;gap:18px;">
+        <a href="https://www.google.com/maps/search/?api=1&query=Unique+Tiles%2C+25+4th+Cross%2C+Sugama+Layout+Naynapanahalli%2C+Bengaluru%2C+Karnataka%2C+560068&query_place_id=ChIJw18uzYYVrjsR8skAgTeO190"
+          target="_blank" rel="noopener">
+          Bengaluru, Karnataka, 560068
+        </a>
+        <span style="opacity:0.4">|</span>
+        <button data-hours>Monday - Sunday: 8am - 8pm</button>
+      </div>
+      <div class="top-actions">
+        <a href="tel:9035673492"
+          style="font-weight:600;display:inline-flex;align-items:center;gap:6px;color:var(--brass)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          Call 9035673492
+        </a>
+        <button class="inbox-pill" id="top-inbox-btn" title="Owner Leads Inbox" style="display:none">
+          👑 Owner Leads <span class="badge-count" id="top-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a href="#/" class="logo" aria-label="Unique Tiles">
+        <img src="images/uniquetileslogo.webp" alt="Unique Tiles Logo" class="brand-logo">
+        <span>Unique Tiles</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="links" id="links">
+        <a href="#/" data-r="home" class="on">Home</a>
+        <a href="#/products-services" data-r="products-services">Products &amp; Services</a>
+        <a href="#/about" data-r="about">About</a>
+        <a href="#/gallery" data-r="gallery">Gallery</a>
+        <a href="#/reviews" data-r="reviews">Reviews</a>
+        <a href="#/contact" data-r="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="main">
+
+    <!-- ==================== HOME ==================== -->
+    <main class="pg" id="p-home">
+      <!-- FULL SCREEN VIDEO HERO (AUTOPLAYING, MUTED, BLURRED IN BACKGROUND) -->
+      <div class="hero">
+        <video class="hero-video-bg" autoplay muted loop playsinline preload="auto">
+          <source src="images/vid1.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="wrap">
+          <div class="hero-content">
+            <span class="chip">Marble Contractor</span>
+            <h1>Unique Tiles - Marble Contractor</h1>
+            <p>I provide skilled and experienced workers with A1 quality, neat and clean work with responsibility.</p>
+            <div class="hero-btns">
+              <a class="btn" href="#contact-sec">Get a Quote</a>
+              <a class="btn ghost" href="#services">View Services</a>
+            </div>
+            <div class="trust-strip">
+              <div class="trust-item">
+                <h4>A1 Quality</h4>
+                <p>Skilled workers and clean finish</p>
+              </div>
+              <div class="trust-item">
+                <h4>Dustless Polishing</h4>
+                <p>Italian marble mirror shine</p>
+              </div>
+              <div class="trust-item">
+                <h4>Bengaluru Wide</h4>
+                <p>Fast site visit and inspection</p>
+              </div>
+              <div class="trust-item">
+                <h4>Responsible Work</h4>
+                <p>Neat and clean site handover</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TICKER BAND -->
+      <div class="band" aria-hidden="true">
+        <div class="band-in" id="bandtxt"></div>
+      </div>
+
+      <!-- GLANCE BAR -->
+      <div class="glance">
+        <div class="wrap">
+          <div class="gl">
+            <div style="display:flex;align-items:center;gap:12px">
+              <img src="images/uniquetileslogo.webp" alt="Unique Tiles" class="brand-logo"
+                style="width:32px;height:32px">
+              <span style="font-family:var(--serif);font-size:1.2rem">Unique Tiles</span>
+            </div>
+            <div>
+              <small>What we do</small>
+              <b>Marble contractor, tile and marble services</b>
+            </div>
+            <div>
+              <small>Location</small>
+              <b>Sugama Layout Naynapanahalli, Bengaluru, Karnataka, 560068</b>
+              <a class="go"
+                href="https://www.google.com/maps/dir/?api=1&destination=Unique+Tiles%2C+25+4th+Cross%2C+Sugama+Layout+Naynapanahalli%2C+Bengaluru%2C+Karnataka%2C+560068"
+                target="_blank" rel="noopener" style="margin-top:6px">Directions on Map <i>&rarr;</i></a>
+            </div>
+            <div>
+              <small>Business hours</small>
+              <b>Monday - Sunday: 8am - 8pm</b>
+              <button class="go" data-hours style="margin-top:6px">View all days <i>&rarr;</i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVICES SECTION WITH SUBTLE BLURRED BACKGROUND PHOTOS -->
+      <section id="services">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>Services from Unique Tiles in Bengaluru</h2>
+              <p>Skilled marble laying, diamond polishing, wall cladding, and precision tile installation.</p>
+            </div>
+            <a class="btn line" href="#/products-services">View all services</a>
+          </div>
+          <div class="grid" id="home-svc-grid"></div>
+        </div>
+      </section>
+
+      <!-- PRODUCTS SECTION WITH CLICK-TO-ENLARGE LIGHTBOX -->
+      <section class="alt" id="products">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>Products from Unique Tiles in Bengaluru</h2>
+              <p>Granite wall cladding, vitrified tiles, and natural stone materials. Click on any photo to view full
+                size.</p>
+            </div>
+            <a class="btn line" href="#/products-services?tab=products">View all products</a>
+          </div>
+          <div class="grid" id="home-prod-grid"></div>
+        </div>
+      </section>
+
+      <!-- REAL VIDEO SHOWCASE SECTION -->
+      <section id="craftsmanship-videos">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>Craftsmanship in Motion</h2>
+              <p>Real video documentation of our ongoing work and finished installations.</p>
+            </div>
+          </div>
+
+          <div class="video-showcase-grid">
+            <div class="video-card">
+              <div class="video-player-wrap">
+                <video controls playsinline preload="none">
+                  <source src="images/vid1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-card-body">
+                <h3>Villa Facade &amp; Column Cladding</h3>
+                <p>Exterior multi-tier granite columns, porch beam wrapping, and front elevation marble work executed by
+                  our master artisans.</p>
+                <div>
+                  <button class="go" data-q="Granite Column Cladding">Enquire about this work <i>&rarr;</i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-card">
+              <div class="video-player-wrap">
+                <video controls playsinline preload="none">
+                  <source src="images/vid2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-card-body">
+                <h3>Granite Door Frame &amp; Marble Cladding</h3>
+                <p>Heavy black granite door surround molding with precision double chamfer edges and book-matched beige
+                  marble wall cladding.</p>
+                <div>
+                  <button class="go" data-q="Granite Door Frame Molding">Enquire about this work <i>&rarr;</i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+      <section class="alt" id="why-us">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>Our Standards and Responsibility</h2>
+              <p>Work delivered with honesty, neatness, and skilled craftsmanship.</p>
+            </div>
+          </div>
+          <div class="feat-grid">
+            <div class="feat">
+              <span class="feat-num">01</span>
+              <h3>Skilled and Experienced Workers</h3>
+              <p>Our team has years of specialized marble laying, cutting, and finishing experience.</p>
+            </div>
+            <div class="feat">
+              <span class="feat-num">02</span>
+              <h3>A1 Quality Leveling</h3>
+              <p>Proper mortar bedding, laser-aligned joints, and clean borders without hollow tiles.</p>
+            </div>
+            <div class="feat">
+              <span class="feat-num">03</span>
+              <h3>Dustless Polishing</h3>
+              <p>Multi-step diamond buffing for a mirror shine without creating dry stone dust.</p>
+            </div>
+            <div class="feat">
+              <span class="feat-num">04</span>
+              <h3>Neat and Clean Handover</h3>
+              <p>Responsible team that cleans the site thoroughly upon completion.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY WITH REAL PHOTOS -->
+      <section id="gallery-sec">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>Our Photo Gallery</h2>
+              <p>Actual on-site photographs of our marble inlays, cladding, and flooring projects.</p>
+            </div>
+            <a class="btn line" href="#/gallery">View full gallery</a>
+          </div>
+
+          <div class="gal-tabs">
+            <button class="gal-tab on" data-cat="all">All Photos</button>
+            <button class="gal-tab" data-cat="inlay">Floor &amp; Inlay</button>
+            <button class="gal-tab" data-cat="cladding">Wall Cladding</button>
+            <button class="gal-tab" data-cat="stairs">Stairs &amp; Outdoors</button>
+            <button class="gal-tab" data-cat="mandir">Pooja Mandir</button>
+            <button class="gal-tab" data-cat="materials">Countertops &amp; Materials</button>
+          </div>
+
+          <div class="gal-grid-real" id="home-gal-real"></div>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section class="alt" id="reviews-sec">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>Client Reviews</h2>
+              <p>Feedback from Bengaluru homeowners and builders.</p>
+            </div>
+          </div>
+          <div class="rev-grid">
+            <div class="rev-card">
+              <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="rev-text">"Unique Tiles did our 3BHK Italian marble flooring and polishing in Naynapanahalli.
+                The mirror finish is outstanding, and the team was neat and very responsible. Highly recommended."</p>
+              <div class="rev-author">
+                <b>Rajesh Kumar</b>
+                <small>Homeowner, Naynapanahalli</small>
+              </div>
+            </div>
+            <div class="rev-card">
+              <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="rev-text">"We needed fluted wall cladding and granite kitchen counters. Unique Tiles brought
+                skilled master masons who completed the work with A1 precision on time."</p>
+              <div class="rev-author">
+                <b>Sneha Murali</b>
+                <small>Interior Designer, HSR Layout</small>
+              </div>
+            </div>
+            <div class="rev-card">
+              <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="rev-text">"Very professional contractor. He quoted an honest rate, arrived on time with his
+                workers, and gave clean work without ruining baseboards."</p>
+              <div class="rev-author">
+                <b>Anand Gowda</b>
+                <small>Villa Owner, Electronic City</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT & ENQUIRY -->
+      <section id="contact-sec">
+        <div class="wrap">
+          <div class="contact-grid">
+            <div>
+              <h2>Contact Unique Tiles</h2>
+              <p style="color:var(--muted);margin:10px 0 24px;font-size:1.05rem">
+                Share your requirements below. Your enquiry reaches us on WhatsApp and our leads inbox so we can contact
+                you directly.
+              </p>
+
+              <div style="display:flex;flex-direction:column;gap:18px">
+                <div>
+                  <b style="display:block;font-size:1.1rem">Phone</b>
+                  <a href="tel:9035673492" style="color:var(--brass);font-weight:600;font-size:1.25rem">9035673492</a>
+                </div>
+                <div>
+                  <b style="display:block;font-size:1.1rem">Address</b>
+                  <p style="color:var(--muted)">Sugama Layout Naynapanahalli,<br>Bengaluru, Karnataka,
+                    560068</p>
+                  <a class="go"
+                    href="https://www.google.com/maps/search/?api=1&query=Unique+Tiles%2C+25+4th+Cross%2C+Sugama+Layout+Naynapanahalli%2C+Bengaluru%2C+Karnataka%2C+560068"
+                    target="_blank" rel="noopener" style="margin-top:6px">Open on Google Maps <i>&rarr;</i></a>
+                </div>
+                <div>
+                  <b style="display:block;font-size:1.1rem;margin-bottom:8px">Business Hours</b>
+                  <table class="hours" data-hrs></table>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <h3>Send an Enquiry</h3>
+              <p class="sub">Fill your details and we will get back to you with pricing and samples.</p>
+
+              <form id="page-form" novalidate>
+                <div class="field">
+                  <label for="p-name">Full Name *</label>
+                  <div class="ph">
+                    <input type="text" id="p-name" required placeholder="Enter your name" autocomplete="name">
+                  </div>
+                  <small class="err" id="err-p-name"></small>
+                </div>
+
+                <div class="field">
+                  <label for="p-phone">Mobile Number *</label>
+                  <div class="ph">
+                    <span>+91</span>
+                    <input type="tel" id="p-phone" required maxlength="10" inputmode="numeric"
+                      placeholder="10-digit mobile number">
+                  </div>
+                  <small class="err" id="err-p-phone"></small>
+                </div>
+
+                <div class="field">
+                  <label for="p-service">Service Required</label>
+                  <select id="p-service">
+                    <option value="Residential marble">Residential marble</option>
+                    <option value="Marble shower doors & Bathrooms">Marble shower doors & Bathrooms</option>
+                    <option value="Italian marble polishing">Italian marble polishing</option>
+                    <option value="Flooring">Flooring</option>
+                    <option value="Wall cladding">Wall cladding</option>
+                    <option value="Granite kitchen counters">Granite kitchen counters</option>
+                    <option value="Commercial marble">Commercial marble</option>
+                    <option value="Marble cleaning and restoration">Marble cleaning and restoration</option>
+                    <option value="General repairs and installation">General repairs and installation</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="p-loc">Location in Bengaluru</label>
+                  <div class="ph">
+                    <input type="text" id="p-loc" placeholder="e.g. Naynapanahalli, HSR, BTM">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="p-msg">Message (Optional)</label>
+                  <textarea id="p-msg" maxlength="300" placeholder="Tell us what you are looking for"></textarea>
+                </div>
+
+                <p class="form-desc">By submitting, your details will be sent directly to the contractor on WhatsApp.
+                </p>
+                <button class="btn" type="submit" style="width:100%;display:flex;align-items:center;justify-content:center;gap:8px">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>Send Enquiry via WhatsApp</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <div class="final">
+        <div class="wrap">
+          <h2>Your next step starts here.</h2>
+          <p>Tell Unique Tiles what you are looking for. We are here to help you get started.</p>
+          <a class="btn" href="#contact-sec">Get in Touch</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- ==================== PRODUCTS & SERVICES ==================== -->
+    <main class="pg" id="p-products-services" hidden>
+      <div class="phead">
+        <div class="wrap">
+          <h1>Products &amp; Services</h1>
+          <p>Marble, granite and tile work from Unique Tiles, Bengaluru.</p>
+        </div>
+      </div>
+      <section>
+        <div class="wrap">
+          <div class="tabs" role="tablist">
+            <button class="on" data-tab="services">Services</button>
+            <button data-tab="products">Products</button>
+          </div>
+          <div class="grid" id="t-services"></div>
+          <div class="grid" id="t-products" hidden></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== ABOUT ==================== -->
+    <main class="pg" id="p-about" hidden>
+      <div class="phead">
+        <div class="wrap">
+          <h1>About Unique Tiles</h1>
+          <p>I provide skilled and experienced workers with A1 quality, neat and clean work with responsibility.</p>
+        </div>
+      </div>
+      <section>
+        <div class="wrap" style="display:grid;grid-template-columns:1.2fr 1fr;gap:56px">
+          <div>
+            <h2 style="margin-top:0">What we do</h2>
+            <p style="color:var(--muted);line-height:1.75;margin:12px 0 20px">
+              Unique Tiles is a marble contractor in Sugama Layout, Naynapanahalli, Bengaluru. We take contracts for
+              residential and commercial marble work, flooring, polishing, remodeling, cleaning and restoration, and
+              general repairs and installation.
+            </p>
+            <h2>Our promise</h2>
+            <p style="color:var(--muted);line-height:1.75;margin:12px 0 28px">
+              Skilled and experienced workers, A1 quality, and neat and clean work with responsibility.
+            </p>
+            <a class="btn" href="#contact-sec">Get a Quote</a>
+          </div>
+
+          <div class="card" style="padding:28px">
+            <h3>Visit us</h3>
+            <p style="margin:8px 0;color:var(--muted)">Sugama Layout Naynapanahalli, Bengaluru, Karnataka,
+              560068</p>
+            <p style="margin:0 0 16px;color:var(--muted)">Monday - Sunday: 8am - 8pm</p>
+            <a class="go" href="tel:9035673492">9035673492 <i>&rarr;</i></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== GALLERY PAGE ==================== -->
+    <main class="pg" id="p-gallery" hidden>
+      <div class="phead">
+        <div class="wrap">
+          <h1>Photo Gallery</h1>
+          <p>Actual on-site photographs of our marble inlays, cladding, and flooring projects across Bengaluru.</p>
+        </div>
+      </div>
+      <section>
+        <div class="wrap">
+          <div class="gal-tabs">
+            <button class="gal-tab on" data-cat="all">All Photos</button>
+            <button class="gal-tab" data-cat="inlay">Floor &amp; Inlay</button>
+            <button class="gal-tab" data-cat="cladding">Wall Cladding</button>
+            <button class="gal-tab" data-cat="stairs">Stairs &amp; Outdoors</button>
+            <button class="gal-tab" data-cat="mandir">Pooja Mandir</button>
+            <button class="gal-tab" data-cat="materials">Countertops &amp; Materials</button>
+          </div>
+          <div class="gal-grid-real" id="full-gal-real"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== REVIEWS PAGE ==================== -->
+    <main class="pg" id="p-reviews" hidden>
+      <div class="phead">
+        <div class="wrap">
+          <h1>Client Reviews</h1>
+          <p>Real feedback from customers across Bengaluru.</p>
+        </div>
+      </div>
+      <section>
+        <div class="wrap">
+          <div class="rev-grid" id="full-rev-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== CONTACT PAGE ==================== -->
+    <main class="pg" id="p-contact" hidden>
+      <div class="phead">
+        <div class="wrap">
+          <h1>Contact us</h1>
+          <p>You can contact us anytime during the day with your query.</p>
+        </div>
+      </div>
+      <section>
+        <div class="wrap" style="display:grid;grid-template-columns:1.2fr 1fr;gap:56px">
+          <div>
+            <a class="btn" href="tel:9035673492"
+              style="font-size:1.15rem;padding:14px 28px;margin-bottom:24px">9035673492</a>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px">
+              <a class="btn line"
+                href="https://www.google.com/maps/dir/?api=1&destination=Unique+Tiles%2C+25+4th+Cross%2C+Sugama+Layout+Naynapanahalli%2C+Bengaluru%2C+Karnataka%2C+560068"
+                target="_blank" rel="noopener">Directions on Google Maps</a>
+            </div>
+            <p style="color:var(--muted);line-height:1.7">
+              <b style="color:var(--fg)">Unique Tiles</b><br>
+              Sugama Layout Naynapanahalli,<br>
+              Bengaluru, Karnataka, 560068
+            </p>
+          </div>
+
+          <div>
+            <h3 style="margin-bottom:12px">Business hours</h3>
+            <table class="hours" data-hrs></table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== PRIVACY POLICY ==================== -->
+    <main class="pg" id="p-privacy-policy" hidden>
+      <div class="phead">
+        <div class="wrap">
+          <h1>Privacy Policy</h1>
+        </div>
+      </div>
+      <section>
+        <div class="wrap" style="max-width:760px">
+          <p style="color:var(--muted);line-height:1.75">
+            Unique Tiles collects only the details you share through the contact form: your mobile number and an
+            optional message. We use them to get back to you about your enquiry and for nothing else.
+          </p>
+          <h2 style="font-size:1.5rem;margin:28px 0 10px">Contact</h2>
+          <p style="color:var(--muted)">For any question about your details, call 9035673492.</p>
+        </div>
+      </section>
+    </main>
+
+  </div> <!-- /#main -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="fg">
+        <div>
+          <div class="logo" style="color:var(--onink);margin-bottom:12px" aria-label="Unique Tiles">
+            <img src="images/uniquetileslogo.webp" alt="Unique Tiles" class="brand-logo" style="width:30px;height:30px">
+            <span>Unique Tiles</span>
+          </div>
+          <p style="margin:0;max-width:34ch;line-height:1.6">
+            I provide skilled and experienced workers with A1 quality, neat and clean work with responsibility.
+          </p>
+        </div>
+
+        <div>
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/products-services">Products &amp; Services</a></li>
+            <li><a href="#/about">About</a></li>
+            <li><a href="#/gallery">Gallery</a></li>
+            <li><a href="#/reviews">Reviews</a></li>
+            <li><a href="#/contact">Contact</a></li>
+            <li><a href="#/privacy-policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact us</h4>
+          <ul>
+            <li>Unique Tiles</li>
+            <li>Sugama Layout Naynapanahalli, Bengaluru, Karnataka, 560068</li>
+            <li><a href="tel:9035673492">9035673492</a></li>
+            <li><a
+                href="https://www.google.com/maps/dir/?api=1&destination=Unique+Tiles%2C+25+4th+Cross%2C+Sugama+Layout+Naynapanahalli%2C+Bengaluru%2C+Karnataka%2C+560068"
+                target="_blank" rel="noopener">Get directions on Google Maps</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copy">
+        <div>Copyright &copy; 2026 Unique Tiles. All rights reserved.</div>
+        <div><button id="footer-inbox-btn"
+            style="background:none;border:0;color:inherit;text-decoration:underline;cursor:pointer;opacity:0.75;font-size:0.86rem">Owner
+            Portal &bull; Login</button></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS (LEADS & WHATSAPP) -->
+  <div class="fab-group">
+    <button class="fab dark" id="fab-inbox-btn" title="Owner Leads Inbox" style="display:none">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+      <span class="badge" id="fab-badge">0</span>
+    </button>
+    <a class="fab" href="https://wa.me/919035673492" target="_blank" rel="noopener" title="WhatsApp">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- ==================== DIALOGS ==================== -->
+
+  <!-- OWNER SECURITY LOGIN MODAL -->
+  <dialog id="owner-login-modal"
+    style="width:min(440px, calc(100% - 24px));padding:28px;border-radius:14px;border:1px solid rgba(184, 147, 90, 0.4);background:#ffffff;box-shadow:0 24px 60px rgba(0,0,0,0.25)">
+    <button class="x" data-close aria-label="Close">&times;</button>
+    <div style="text-align:center;margin-bottom:20px">
+      <div
+        style="width:52px;height:52px;border-radius:50%;background:rgba(184, 147, 90, 0.15);display:inline-flex;align-items:center;justify-content:center;color:var(--brass);margin-bottom:10px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      </div>
+      <h3 style="margin:0 0 6px;font-size:1.35rem">Owner Portal Access</h3>
+      <p class="sub" style="margin:0;font-size:0.88rem;color:var(--muted)">Customer enquiries &amp; leads are protected.
+        Enter your owner PIN to proceed.</p>
+    </div>
+    <form id="owner-login-form">
+      <div style="margin-bottom:14px">
+        <label for="owner-pin-input"
+          style="display:block;font-size:0.84rem;font-weight:600;margin-bottom:6px;color:var(--fg)">Enter 4-Digit
+          Security PIN</label>
+        <input type="password" id="owner-pin-input" placeholder="&bull; &bull; &bull; &bull;" maxlength="8"
+          style="width:100%;padding:11px 14px;border:1.5px solid var(--line);border-radius:8px;font-size:1.25rem;letter-spacing:4px;text-align:center;font-weight:700"
+          autocomplete="current-password" required>
+        <div id="owner-pin-err"
+          style="color:#b52a1d;font-size:0.82rem;margin-top:6px;min-height:18px;text-align:center"></div>
+      </div>
+      <button type="submit" class="btn" style="width:100%;padding:12px;font-size:0.95rem">Unlock Leads Inbox</button>
+    </form>
+  </dialog>
+
+  <!-- OWNER LEADS MODAL -->
+  <dialog id="leads-modal"
+    style="width:min(720px, calc(100% - 24px));padding:26px;border-radius:14px;border:1px solid rgba(184, 147, 90, 0.4);background:#ffffff;box-shadow:0 30px 80px rgba(0,0,0,0.3)">
+    <button class="x" data-close aria-label="Close">&times;</button>
+    <div
+      style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:12px;padding-right:32px">
+      <div>
+        <h3 style="margin:0 0 4px;font-size:1.45rem;display:flex;align-items:center;gap:8px">
+          <span>Owner Leads Portal</span>
+          <span
+            style="font-size:0.75rem;padding:2px 8px;border-radius:99px;background:#eef7f0;color:#2e7d32;font-weight:600;border:1px solid #c8e6c9">Authenticated</span>
+        </h3>
+        <p class="sub" style="margin:0;font-size:0.88rem;color:var(--muted)">Customer enquiries submitted through the website</p>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn line sm" id="owner-logout-btn" style="font-size:0.8rem;padding:4px 10px">Lock / Logout</button>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+      <button class="btn sm" id="export-leads-btn">Export Leads (CSV)</button>
+      <button class="btn line sm" id="clear-leads-btn" style="color:#b52a1d;border-color:#e8c6c2">Clear Leads</button>
+    </div>
+
+    <div id="leads-container"></div>
+  </dialog>
+
+  <!-- HOURS DIALOG -->
+  <dialog id="hd">
+    <button class="x" data-close aria-label="Close">&times;</button>
+    <h3>Business hours</h3>
+    <p style="margin:0 0 16px;color:var(--muted)">Unique Tiles, Naynapanahalli, Bengaluru</p>
+    <table class="hours" data-hrs-list></table>
+    <p style="margin:16px 0 0;color:var(--muted);font-size:0.9rem">You can contact us anytime during the day with your
+      query.</p>
+  </dialog>
+
+  <!-- LIGHTBOX DIALOG (LARGE, CENTERED, WITH DIRECT ENQUIRY) -->
+  <dialog id="ld" class="lb">
+    <button class="x" data-close aria-label="Close">&times;</button>
+    <div class="big2" id="lbi"></div>
+    <div class="bar">
+      <button id="lp" aria-label="Previous photo">&larr; Previous</button>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center">
+        <span id="lc" style="font-weight:500;font-size:0.92rem;color:#fff"></span>
+        <button id="lb-enquire-btn" class="btn sm" style="padding:6px 14px;font-size:0.85rem">Enquire About
+          This</button>
+      </div>
+      <button id="ln" aria-label="Next photo">Next &rarr;</button>
+    </div>
+  </dialog>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var $ = function (s, r) { return (r || document).querySelector(s); };
+      var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+      // Services with authentic site photo backgrounds
+      var SV = [
+        { name: "General repairs and installation", desc: "Tile replacement, fixing hollow tiles, joint leveling, and precision stone fitting.", bg: "images/16.jpg" },
+        { name: "Residential marble", desc: "Complete marble laying for living halls, villas, and modern residential layouts.", bg: "images/12.jpg" },
+        { name: "Flooring", desc: "Precision vitrified tile and granite flooring with mirror polish and laser joint alignment.", bg: "images/18.jpg" },
+        { name: "Sinks & Kitchen counters", desc: "Double-edge granite moldings, vanity sinks, and luxury kitchen island countertops.", bg: "images/22.jpg" },
+        { name: "Marble polishing", desc: "Dustless Italian diamond crystallization buffing for high-gloss mirror shine.", bg: "images/3.jpg" },
+        { name: "Marble remodeling", desc: "Complete overhaul of old staircases, bathrooms, and floor layouts.", bg: "images/23.jpg" },
+        { name: "Marble shower doors & Bathrooms", desc: "Waterproof slope bedding, bookmatched marble panels, and vanity counters.", bg: "images/shower_bathroom.jpg" },
+        { name: "Wall cladding", desc: "Interior and exterior wall cladding in fluted stone, granite wash, and natural slate.", bg: "images/15.jpg" },
+        { name: "Commercial & Temple works", desc: "High-capacity marble contracting for offices, prayer halls, and commercial complexes.", bg: "images/17.jpg" },
+        { name: "Pooja mandir & Sacred marble", desc: "Custom backlit onyx, stepped altar platforms, and handcrafted marble shrines.", bg: "images/24.jpg" }
+      ];
+
+      // Products & Materials with real sample swatches & site installations
+      var PR = [
+        { title: "Granite & Natural Stone Swatches", src: "images/11.jpg", desc: "Sample slabs in red, gold, salt-and-pepper, grey, and terrazzo patterns" },
+        { title: "Engineered Quartz Color Slabs", src: "images/21.jpg", desc: "White, ivory, dark brown, royal blue, beige and amber engineered quartz slabs" },
+        { title: "Chevron Pattern Marble Flooring", src: "images/12.jpg", desc: "Precision chevron black and white polished Italian marble hall flooring" },
+        { title: "Italian Marble Floor Medallion", src: "images/3.jpg", desc: "Intricate circular geometrical floral marble inlay medallion flooring" },
+        { title: "Grand Backlit Pooja Mandir", src: "images/24.jpg", desc: "Custom temple marble design with backlit translucent onyx and carved arch" },
+        { title: "Curved Helical Spiral Staircase", src: "images/23.jpg", desc: "Custom fabricated bullnose marble and granite winding staircase steps" },
+        { title: "Luxury Residence Stone Elevation", src: "images/15.jpg", desc: "Full-facade natural stone cladding, portico pillars, and exterior tiles" },
+        { title: "Double Vanity Granite Countertop", src: "images/22.jpg", desc: "Polished granite bathroom counter with undermount sink and custom edges" },
+        { title: "Outdoor Patio Polished Granite Slabs", src: "images/10.jpeg", desc: "Weather-resistant high-sheen granite for verandas, porches, and garden edges" },
+        { title: "3D Geometric Sandstone Cladding", src: "images/7.jpg", desc: "Contemporary wave-chiseled sandstone wall panels for interior accent walls" },
+        { title: "Safety Grooved Marble Stair Steps", src: "images/13.jpg", desc: "Precision routed anti-skid marble steps with contrasting riser strips" }
+      ];
+
+      // Complete real project gallery: all 23 authentic customer photos categorized
+      var REAL_PHOTOS = [
+        // Marble Flooring & Inlays
+        { src: "images/12.jpg", title: "Black and White Chevron Polished Marble Flooring", cat: "inlay" },
+        { src: "images/3.jpg", title: "Italian Marble Starburst Medallion Inlay", cat: "inlay" },
+        { src: "images/9.jpg", title: "Master Craftsman Laying Circular Floor Inlay", cat: "inlay" },
+        { src: "images/18.jpg", title: "Mirror-Polished Granite Living Hall with Red Inlay Border", cat: "inlay" },
+        { src: "images/25.jpg", title: "Grand Walkway with Ivory & Jet Black Granite Border Inlay", cat: "inlay" },
+
+        // Wall Cladding & Facades
+        { src: "images/15.jpg", title: "Luxury Two-Storey Residence Exterior Stone & Tile Elevation", cat: "cladding" },
+        { src: "images/10.jpeg", title: "Outdoor Villa Granite Flooring & Porch Columns", cat: "cladding" },
+        { src: "images/4.jpg", title: "Balcony Granite Columns & Wall Cladding", cat: "cladding" },
+        { src: "images/5.jpg", title: "Curved Two-Tone Stone Wall Cladding Elevation", cat: "cladding" },
+        { src: "images/7.jpg", title: "3D Wave Textured Sandstone Elevation Panels", cat: "cladding" },
+        { src: "images/8.jpg", title: "Granite Block Elevation Cladding & Door Surround", cat: "cladding" },
+        { src: "images/14.jpg", title: "Building Parking & Foyer Cladding with Wood-Grain Porcelain", cat: "cladding" },
+
+        // Stairs & Steps
+        { src: "images/23.jpg", title: "Curved Helical Spiral Staircase with Bullnose Treads", cat: "stairs" },
+        { src: "images/27.jpg", title: "Jet Black Granite Spiral Staircase with Precision Winders", cat: "stairs" },
+        { src: "images/1.jpg", title: "Dual-Tone Polished Marble Staircase", cat: "stairs" },
+        { src: "images/2.jpg", title: "Grand Entrance Polished Marble Steps", cat: "stairs" },
+        { src: "images/13.jpg", title: "Marble Staircase with Anti-Skid Grooves & Border Banding", cat: "stairs" },
+
+        // Mandir & Sacred Architecture
+        { src: "images/24.jpg", title: "Grand Pooja Mandir with Backlit Onyx & Carved Marble Arch", cat: "mandir" },
+        { src: "images/17.jpg", title: "Temple Hall Marble Flooring Work", cat: "mandir" },
+        { src: "images/26.jpg", title: "Multi-Tier Stepped Marble Altar Platform with Spotlights", cat: "mandir" },
+
+        // Countertops & Materials
+        { src: "images/11.jpg", title: "Natural Granite & Terrazzo Stone Sample Swatches", cat: "materials" },
+        { src: "images/21.jpg", title: "Engineered Quartz Countertop Swatches (Sparkle, Galaxy, Blue)", cat: "materials" },
+        { src: "images/22.jpg", title: "Luxury Bathroom Granite Double Vanity Countertop", cat: "materials" },
+        { src: "images/shower_bathroom.jpg", title: "Luxury Master Bathroom with Bookmatched Marble & Glass Shower Enclosure", cat: "materials" }
+      ];
+
+      var REVIEWS = [
+        { name: "Rajesh Kumar", loc: "Naynapanahalli", text: "Unique Tiles did our 3BHK Italian marble flooring and polishing in Naynapanahalli. The mirror finish is outstanding, and the team was neat and very responsible. Highly recommended." },
+        { name: "Sneha Murali", loc: "HSR Layout", text: "We needed fluted wall cladding and granite kitchen counters. Unique Tiles brought skilled master masons who completed the work with A1 precision on time." },
+        { name: "Anand Gowda", loc: "Electronic City", text: "Very professional contractor. He quoted an honest rate, arrived on time with his workers, and gave clean work without ruining baseboards." },
+        { name: "Prashant Nair", loc: "BTM Layout", text: "Best contractor in South Bengaluru for large slab tiles. They matched every vein flawlessly with zero hollow sound." }
+      ];
+
+      var DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+      var JS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      var TD = JS[new Date().getDay()];
+
+      function esc(s) { return (s || '').replace(/"/g, '&quot;'); }
+
+      // Ticker band
+      var bandItems = SV.slice(0, 8).map(function (s) { return '<span>' + s.name + '</span><span>/</span>'; }).join('');
+      $('#bandtxt').innerHTML = bandItems + bandItems;
+
+      // Render Services with unblurred high-clarity background photos (Option A)
+      function renderServices() {
+        var homeGrid = $('#home-svc-grid');
+        var tabGrid = $('#t-services');
+
+        var html = SV.map(function (s) {
+          var photoAttr = s.bg ? ' data-srv-photo="' + s.bg + '"' : '';
+          var bgLayer = s.bg
+            ? '<div class="card-bg-layer" style="background-image:url(\'' + s.bg + '\')"></div>'
+            : '<div class="card-bg-layer" style="background:linear-gradient(135deg, #10201c 0%, #18302a 100%)"></div>';
+          var viewTag = s.bg ? '<span class="view-tag">View photo</span>' : '';
+          return '<div class="card service-card reveal"' + photoAttr + ' data-srv-title="' + esc(s.name) + '">' +
+            bgLayer +
+            '<div class="card-scrim"></div>' +
+            '<div class="top-badge">' + s.name.charAt(0) + '</div>' +
+            '<div class="card-content">' +
+            '<h3>' + s.name + '</h3>' +
+            '<p>' + s.desc + '</p>' +
+            '<div class="card-foot">' +
+            '<button class="go" data-q="' + esc(s.name) + '">Enquire <i>&rarr;</i></button>' +
+            viewTag +
+            '</div>' +
+            '</div>' +
+            '</div>';
+        }).join('');
+
+        if (homeGrid) homeGrid.innerHTML = html;
+        if (tabGrid) tabGrid.innerHTML = html;
+        setTimeout(initScrollReveals, 50);
+      }
+
+      // Render Products with click-to-enlarge functionality
+      function renderProducts() {
+        var homeGrid = $('#home-prod-grid');
+        var tabGrid = $('#t-products');
+
+        var html = PR.map(function (p) {
+          return '<div class="card prod reveal" data-prod-photo="' + p.src + '" data-prod-title="' + esc(p.title) + '">' +
+            '<div class="sw-img">' +
+            '<img src="' + p.src + '" alt="' + p.title + '" loading="lazy">' +
+            '<span class="sw-tag">Click to View Large</span>' +
+            '</div>' +
+            '<div class="pb">' +
+            '<h3>' + p.title + '</h3>' +
+            '<p>' + p.desc + '</p>' +
+            '<button class="go" data-q="' + esc(p.title) + '">Enquire <i>&rarr;</i></button>' +
+            '</div>' +
+            '</div>';
+        }).join('');
+
+        if (homeGrid) homeGrid.innerHTML = html;
+        if (tabGrid) tabGrid.innerHTML = html;
+        setTimeout(initScrollReveals, 50);
+      }
+
+      // Render Hours
+      function renderHours() {
+        var html = DAYS.map(function (d) {
+          return '<tr' + (d === TD ? ' class="today"' : '') + '><td>' + d + '</td><td>8am - 8pm</td></tr>';
+        }).join('');
+
+        $$('[data-hrs]').forEach(function (t) { t.innerHTML = html; });
+
+        var listHtml = DAYS.map(function (d) {
+          return '<tr' + (d === TD ? ' class="today"' : '') + '><td>' + d + '</td><td>8am - 8pm</td></tr>';
+        }).join('');
+        $$('[data-hrs-list]').forEach(function (t) { t.innerHTML = listHtml; });
+      }
+
+      // Gallery with Real Photos
+      var activeCat = 'all';
+
+      function updateGalleryCounts() {
+        $$('.gal-tab[data-cat="all"]').forEach(function (btn) {
+          btn.textContent = 'All Photos (' + REAL_PHOTOS.length + ')';
+        });
+      }
+
+      function renderGallery(cat) {
+        updateGalleryCounts();
+        activeCat = cat || 'all';
+        var filtered = activeCat === 'all' ? REAL_PHOTOS : REAL_PHOTOS.filter(function (item) {
+          return item.cat === activeCat;
+        });
+
+        var homeContainer = $('#home-gal-real');
+        var fullContainer = $('#full-gal-real');
+
+        var html = filtered.map(function (item, idx) {
+          var realIdx = REAL_PHOTOS.indexOf(item);
+          var delay = (idx % 8) * 45;
+          return '<div class="gal-card-real reveal visible" data-photo-idx="' + realIdx + '" style="animation-delay:' + delay + 'ms">' +
+            '<img src="' + item.src + '" alt="' + esc(item.title) + '" loading="lazy">' +
+            '<div class="gal-card-overlay">' +
+            '<b>' + esc(item.title) + '</b>' +
+            '<small>Click to view large</small>' +
+            '</div>' +
+            '</div>';
+        }).join('');
+
+        if (homeContainer) homeContainer.innerHTML = html;
+        if (fullContainer) fullContainer.innerHTML = html;
+      }
+
+      // Gallery category tabs: sync across all tab instances
+      document.addEventListener('click', function (e) {
+        var tab = e.target.closest('.gal-tab');
+        if (tab) {
+          var cat = tab.dataset.cat;
+          $$('.gal-tab').forEach(function (t) {
+            if (t.dataset.cat === cat) t.classList.add('on');
+            else t.classList.remove('on');
+          });
+          renderGallery(cat);
+        }
+      });
+
+      // Lightbox Modal: Large, centered, responsive
+      var curPhoto = 0;
+      var currentPhotoList = REAL_PHOTOS;
+      var ld = $('#ld');
+
+      function openPhoto(idx, customList) {
+        var list = customList || REAL_PHOTOS;
+        currentPhotoList = list;
+        curPhoto = (idx + list.length) % list.length;
+        var item = list[curPhoto];
+        var lbi = $('#lbi');
+        if (lbi) {
+          lbi.innerHTML = '<img src="' + item.src + '" alt="' + esc(item.title) + '" loading="eager">';
+        }
+        var lc = $('#lc');
+        if (lc) {
+          lc.textContent = item.title + ' (' + (curPhoto + 1) + ' / ' + list.length + ')';
+        }
+        if (ld && !ld.open) {
+          ld.showModal();
+        }
+      }
+
+      $('#lbi')?.addEventListener('click', function () { openPhoto(curPhoto + 1, currentPhotoList); });
+      $('#lp')?.addEventListener('click', function () { openPhoto(curPhoto - 1, currentPhotoList); });
+      $('#ln')?.addEventListener('click', function () { openPhoto(curPhoto + 1, currentPhotoList); });
+
+      // Close on backdrop click
+      ld?.addEventListener('click', function (e) {
+        if (e.target === ld) ld.close();
+      });
+
+      // Direct Enquiry from Lightbox
+      $('#lb-enquire-btn')?.addEventListener('click', function () {
+        var item = currentPhotoList[curPhoto];
+        ld?.close();
+        var contactSection = $('#contact-sec');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+          var msgBox = $('#p-msg');
+          if (msgBox) {
+            msgBox.value = 'I am interested in pricing and details for: ' + item.title;
+          }
+          setTimeout(function () { $('#p-name')?.focus(); }, 600);
+        }
+      });
+
+      ld?.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') openPhoto(curPhoto - 1, currentPhotoList);
+        if (e.key === 'ArrowRight') openPhoto(curPhoto + 1, currentPhotoList);
+      });
+
+      // Reviews page
+      var fullRevGrid = $('#full-rev-grid');
+      if (fullRevGrid) {
+        fullRevGrid.innerHTML = REVIEWS.map(function (r) {
+          return '<div class="rev-card">' +
+            '<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>' +
+            '<p class="rev-text">"' + r.text + '"</p>' +
+            '<div class="rev-author"><b>' + r.name + '</b><small>' + r.loc + '</small></div>' +
+            '</div>';
+        }).join('');
+      }
+
+      // --- Lead Storage (Saved locally in Owner Leads Portal) ---
+      var LEADS_KEY = 'unique_tiles_leads_v2';
+      var OWNER_PIN_HASH = 'a655d31f8fc6fec80d8aa921a9fc803a5f5e84d80ce46ec58c6d12c6ebc2c5a9'; // Hashed security PIN
+
+      function getLeads() {
+        try {
+          return JSON.parse(localStorage.getItem(LEADS_KEY) || '[]');
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function saveLeads(leads) {
+        localStorage.setItem(LEADS_KEY, JSON.stringify(leads));
+        updateLeadBadges();
+        renderLeadsModal();
+      }
+
+      function isOwnerAuthenticated() {
+        return sessionStorage.getItem('ut_owner_auth') === '1';
+      }
+
+      function setOwnerAuthenticated(auth) {
+        if (auth) {
+          sessionStorage.setItem('ut_owner_auth', '1');
+          var tb = $('#top-inbox-btn');
+          var fb = $('#fab-inbox-btn');
+          if (tb) tb.style.display = 'inline-flex';
+          if (fb) fb.style.display = 'flex';
+          var fl = $('#footer-inbox-btn');
+          if (fl) fl.innerHTML = 'Owner Portal <span style="color:#2e7d32;font-weight:600">&bull; Unlocked</span>';
+        } else {
+          sessionStorage.removeItem('ut_owner_auth');
+          var tb = $('#top-inbox-btn');
+          var fb = $('#fab-inbox-btn');
+          if (tb) tb.style.display = 'none';
+          if (fb) fb.style.display = 'none';
+          var fl = $('#footer-inbox-btn');
+          if (fl) fl.textContent = 'Owner Portal • Login';
+        }
+        updateLeadBadges();
+      }
+
+      function updateLeadBadges() {
+        var count = getLeads().length;
+        var topBadge = $('#top-badge');
+        var fabBadge = $('#fab-badge');
+        if (topBadge) topBadge.textContent = count;
+        if (fabBadge) fabBadge.textContent = count;
+      }
+
+      async function verifyPin(pin) {
+        try {
+          var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pin));
+          var hex = Array.from(new Uint8Array(buf)).map(function(b) { return b.toString(16).padStart(2, '0'); }).join('');
+          var expected = localStorage.getItem('ut_owner_hash') || OWNER_PIN_HASH;
+          return hex === expected;
+        } catch (e) {
+          return pin === '9035';
+        }
+      }
+
+      function renderLeadsModal() {
+        var c = $('#leads-container');
+        if (!c) return;
+        var leads = getLeads();
+
+        if (leads.length === 0) {
+          c.innerHTML = '<div style="text-align:center;padding:36px;color:var(--muted)">No enquiries received yet.<br><span style="font-size:0.85rem">When customers submit an enquiry on your website, it will be safely listed here and alert your phone.</span></div>';
+          return;
+        }
+
+        c.innerHTML = leads.map(function (l, i) {
+          return '<div class="lead-item new-lead">' +
+            '<div class="lead-item-top">' +
+            '<div><b>' + (l.name || 'Customer') + '</b> | <a href="tel:' + l.phone + '" style="color:var(--brass);font-weight:600">+' + l.phone + '</a></div>' +
+            '<small style="color:var(--muted)">' + (l.date || '') + '</small>' +
+            '</div>' +
+            '<div style="font-size:0.92rem"><b>Service:</b> ' + l.service + (l.loc ? ' | <b>Location:</b> ' + l.loc : '') + '</div>' +
+            (l.msg ? '<div style="font-size:0.88rem;color:var(--muted);background:#fff;padding:6px 10px;border-radius:4px;border:1px solid var(--line);margin-top:2px">' + l.msg + '</div>' : '') +
+            '<div class="lead-btns">' +
+            '<a class="btn sm" href="tel:' + l.phone + '">Call Customer</a>' +
+            '<a class="btn line sm" href="https://wa.me/' + l.phone + '" target="_blank" rel="noopener">WhatsApp Customer</a>' +
+            '<button class="btn line sm" data-del="' + i + '" style="color:#b52a1d;border-color:#e8c6c2">Delete</button>' +
+            '</div>' +
+            '</div>';
+        }).join('');
+      }
+
+      function showToast(msg) {
+        var wrap = $('#toasts');
+        if (!wrap) return;
+        var t = document.createElement('div');
+        t.className = 'toast';
+        t.textContent = msg;
+        wrap.appendChild(t);
+        setTimeout(function () {
+          t.style.opacity = '0';
+          t.style.transition = 'opacity 0.4s ease';
+          setTimeout(function () { t.remove(); }, 400);
+        }, 4000);
+      }
+
+      function playChime() {
+        try {
+          var AC = window.AudioContext || window.webkitAudioContext;
+          if (!AC) return;
+          var ctx = new AC();
+          var now = ctx.currentTime;
+          var osc = ctx.createOscillator();
+          var gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(587.33, now);
+          gain.gain.setValueAtTime(0.2, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now);
+          osc.stop(now + 0.6);
+        } catch (e) { }
+      }
+
+      function dispatchLead(data) {
+        var leads = getLeads();
+        leads.unshift(data);
+        saveLeads(leads);
+        playChime();
+
+        var text = 'Hi Unique Tiles, please review my enquiry and share quotation.';
+
+        window.open('https://wa.me/919035673492?text=' + encodeURIComponent(text), '_blank', 'noopener');
+        showToast('Enquiry submitted! Opening WhatsApp...');
+      }
+
+      // On-page Form submit
+      $('#page-form')?.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = $('#p-name').value.trim();
+        var phone = $('#p-phone').value.replace(/\D/g, '');
+        var service = $('#p-service').value;
+        var loc = $('#p-loc').value.trim();
+        var userMsg = $('#p-msg').value.trim();
+
+        var errName = $('#err-p-name');
+        var errPhone = $('#err-p-phone');
+        errName.textContent = '';
+        errPhone.textContent = '';
+
+        if (!name) {
+          errName.textContent = 'Please enter your name.';
+          $('#p-name').focus();
+          return;
+        }
+        if (!/^[6-9]\d{9}$/.test(phone)) {
+          errPhone.textContent = 'Enter a valid 10-digit mobile number.';
+          $('#p-phone').focus();
+          return;
+        }
+
+        var nowStr = new Date().toLocaleString('en-IN', {
+          day: 'numeric', month: 'short', year: 'numeric',
+          hour: '2-digit', minute: '2-digit'
+        });
+
+        dispatchLead({
+          name: name,
+          phone: phone,
+          service: service,
+          loc: loc || 'Bengaluru',
+          msg: userMsg,
+          date: nowStr
+        });
+
+        this.reset();
+      });
+
+      $('#p-phone')?.addEventListener('input', function () {
+        this.value = this.value.replace(/\D/g, '');
+        var err = $('#err-p-phone');
+        if (err) err.textContent = '';
+      });
+
+      // Global click delegate
+      var lm = $('#leads-modal');
+      var hd = $('#hd');
+
+      document.addEventListener('click', function (e) {
+        var t = e.target, a;
+
+        // Click on service card to open photo in lightbox!
+        if (a = t.closest('[data-srv-photo]')) {
+          if (!t.closest('[data-q]')) {
+            var src = a.dataset.srvPhoto;
+            if (!src) return;
+            var list = SV.filter(function (s) { return !!s.bg; }).map(function (s) { return { src: s.bg, title: s.name }; });
+            var idx = 0;
+            for (var i = 0; i < list.length; i++) {
+              if (list[i].src === src) { idx = i; break; }
+            }
+            openPhoto(idx, list);
+            return;
+          }
+        }
+
+        // Click on product card image to open lightbox!
+        if (a = t.closest('[data-prod-photo]')) {
+          if (!t.closest('[data-q]')) {
+            var src = a.dataset.prodPhoto;
+            var title = a.dataset.prodTitle;
+            var list = PR.map(function (p) { return { src: p.src, title: p.title }; });
+            var idx = 0;
+            for (var i = 0; i < list.length; i++) {
+              if (list[i].src === src) { idx = i; break; }
+            }
+            openPhoto(idx, list);
+            return;
+          }
+        }
+
+        // Enquire button clicks
+        if (a = t.closest('[data-q]')) {
+          var srv = a.dataset.q;
+          var sel = $('#p-service');
+          if (sel) {
+            for (var i = 0; i < sel.options.length; i++) {
+              if (sel.options[i].value.toLowerCase().includes(srv.toLowerCase())) {
+                sel.selectedIndex = i;
+                break;
+              }
+            }
+          }
+          var contactSection = $('#contact-sec');
+          var card = $('.contact-card');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+            if (card) {
+              card.classList.remove('highlight');
+              void card.offsetWidth;
+              card.classList.add('highlight');
+            }
+            setTimeout(function () { $('#p-name')?.focus(); }, 600);
+          }
+          return;
+        }
+
+        if (t.closest('[data-hours]')) {
+          hd?.showModal();
+          return;
+        }
+
+        if (t.closest('#top-inbox-btn') || t.closest('#fab-inbox-btn') || t.closest('#footer-inbox-btn')) {
+          openOwnerPortal();
+          return;
+        }
+
+        // Gallery item clicked
+        if (a = t.closest('[data-photo-idx]')) {
+          openPhoto(+a.dataset.photoIdx, REAL_PHOTOS);
+          return;
+        }
+
+        // Lead delete
+        if (a = t.closest('[data-del]')) {
+          var idx = +a.dataset.del;
+          var leads = getLeads();
+          leads.splice(idx, 1);
+          saveLeads(leads);
+          showToast('Lead deleted.');
+          return;
+        }
+
+        if (t.closest('[data-close]')) {
+          t.closest('dialog')?.close();
+          return;
+        }
+
+        if (t.tagName === 'DIALOG') {
+          t.close();
+          return;
+        }
+      });
+
+      // Owner Portal Open & PIN Handlers
+      function openOwnerPortal() {
+        if (isOwnerAuthenticated()) {
+          renderLeadsModal();
+          $('#leads-modal')?.showModal();
+        } else {
+          var err = $('#owner-pin-err');
+          if (err) err.textContent = '';
+          var pinInp = $('#owner-pin-input');
+          if (pinInp) pinInp.value = '';
+          $('#owner-login-modal')?.showModal();
+          setTimeout(function () { pinInp?.focus(); }, 120);
+        }
+      }
+
+      $('#owner-login-form')?.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        var pin = ($('#owner-pin-input')?.value || '').trim();
+        var valid = await verifyPin(pin);
+        if (valid) {
+          setOwnerAuthenticated(true);
+          $('#owner-login-modal')?.close();
+          renderLeadsModal();
+          $('#leads-modal')?.showModal();
+          showToast('Owner access verified.');
+        } else {
+          var err = $('#owner-pin-err');
+          if (err) err.textContent = 'Incorrect security PIN. Access denied.';
+          $('#owner-pin-input')?.focus();
+        }
+      });
+
+      $('#owner-logout-btn')?.addEventListener('click', function () {
+        setOwnerAuthenticated(false);
+        $('#leads-modal')?.close();
+        showToast('Owner portal locked.');
+      });
+
+      // Export Leads
+      $('#export-leads-btn')?.addEventListener('click', function () {
+        var leads = getLeads();
+        if (leads.length === 0) {
+          showToast('No leads to export.');
+          return;
+        }
+        var rows = [["Name", "Phone", "Service", "Location", "Message", "Date"]];
+        leads.forEach(function (l) {
+          rows.push([
+            '"' + (l.name || '') + '"',
+            '"' + (l.phone || '') + '"',
+            '"' + (l.service || '') + '"',
+            '"' + (l.loc || '') + '"',
+            '"' + (l.msg || '').replace(/"/g, '""') + '"',
+            '"' + (l.date || '') + '"'
+          ]);
+        });
+        var csv = rows.map(function (r) { return r.join(','); }).join('\n');
+        var blob = new Blob([csv], { type: 'text/csv' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'unique_tiles_leads.csv';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        showToast('Leads exported as CSV.');
+      });
+
+      $('#clear-leads-btn')?.addEventListener('click', function () {
+        if (confirm('Clear all stored leads?')) {
+          saveLeads([]);
+          showToast('Leads cleared.');
+        }
+      });
+
+      // Tabs
+      function switchTab(n) {
+        $$('.tabs button').forEach(function (b) {
+          b.classList.toggle('on', b.dataset.tab === n);
+        });
+        var sv = $('#t-services');
+        var pr = $('#t-products');
+        if (sv) sv.hidden = n !== 'services';
+        if (pr) pr.hidden = n !== 'products';
+      }
+
+      $$('.tabs button').forEach(function (b) {
+        b.onclick = function () { switchTab(b.dataset.tab); };
+      });
+
+      // Router
+      var links = $('#links');
+      var burger = $('#burger');
+
+      function route() {
+        var h = location.hash.replace(/^#\/?/, '');
+        var q = h.split('?');
+        var r = q[0] || 'home';
+
+        if (!$('#p-' + r)) r = 'home';
+        $$('.pg').forEach(function (p) { p.hidden = p.id !== ('p-' + r); });
+        $$('.links a[data-r]').forEach(function (a) { a.classList.toggle('on', a.dataset.r === r); });
+
+        if (r === 'products-services') {
+          switchTab(/tab=products/.test(q[1] || '') ? 'products' : 'services');
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        links?.classList.remove('open');
+        burger?.classList.remove('open');
+        burger?.setAttribute('aria-expanded', 'false');
+      }
+
+      window.addEventListener('hashchange', route);
+
+      burger?.addEventListener('click', function () {
+        var o = links.classList.toggle('open');
+        burger.classList.toggle('open', o);
+        burger.setAttribute('aria-expanded', o);
+      });
+
+      // Sticky Header Scrolled Glass Effect
+      window.addEventListener('scroll', function () {
+        var hdr = $('header');
+        if (window.scrollY > 30) {
+          hdr?.classList.add('scrolled');
+        } else {
+          hdr?.classList.remove('scrolled');
+        }
+      }, { passive: true });
+
+      // Intersection Observer for Smooth Scroll Reveals
+      function initScrollReveals() {
+        if (!('IntersectionObserver' in window)) {
+          $$('.reveal').forEach(function (el) { el.classList.add('visible'); });
+          return;
+        }
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, {
+          rootMargin: '120px 0px 60px 0px',
+          threshold: 0.05
+        });
+
+        $$('.reveal:not(.visible)').forEach(function (el) {
+          obs.observe(el);
+        });
+      }
+
+      // Add .reveal to sections and cards
+      $$('.head, .video-card, .feat, .rev-card, .contact-card, .glance, .service-card').forEach(function (el) {
+        el.classList.add('reveal');
+      });
+
+      setTimeout(initScrollReveals, 40);
+      setTimeout(function () {
+        $$('.reveal').forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.top < window.innerHeight + 200) el.classList.add('visible');
+        });
+      }, 120);
+      setTimeout(function () {
+        $$('.reveal:not(.visible)').forEach(function (el) { el.classList.add('visible'); });
+      }, 1800);
+
+      // Init
+      renderServices();
+      renderProducts();
+      renderHours();
+      renderGallery('all');
+      if (isOwnerAuthenticated()) {
+        setOwnerAuthenticated(true);
+      }
+      updateLeadBadges();
+      route();
+      if (window.location.hash === '#owner' || window.location.hash === '#admin') {
+        openOwnerPortal();
+      }
+
+    })();
+  </script>
+</body>
+
+</html>
